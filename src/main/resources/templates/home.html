@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Temperature</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="forecast : ${Forecasts.forecast}">
+            <td th:text="${forecast.date}"></td>
+            <td th:text="${forecast.night.text}"></td>
+            <td th:text="${forecast.day.text}"></td>
+          </tr>
+        </tbody>
+      </table>
+</html>
