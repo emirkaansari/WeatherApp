@@ -10,8 +10,6 @@ import com.eks.WeatherApp.pojo.Forecasts;
 import com.eks.WeatherApp.pojo.ObjectFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
 import java.net.URL;
 @Service
 public class WeatherService {
@@ -20,10 +18,6 @@ public class WeatherService {
 
         JAXBContext jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        //HttpURLConnection httpConn = (HttpURLConnection)url.openConnection();
-        //httpConn.setRequestMethod("GET");
-        //httpConn.setRequestProperty("Accept", "application/xml");
-        //InputStream xmlStream = httpConn.getInputStream();
         return (Forecasts) jaxbUnmarshaller.unmarshal(url);
     }
 

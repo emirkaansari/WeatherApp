@@ -1,19 +1,206 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Temperature</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr th:each="forecast : ${Forecasts.forecast}">
-            <td th:text="${forecast.date}"></td>
-            <td th:text="${forecast.night.text}"></td>
-            <td th:text="${forecast.day.text}"></td>
-          </tr>
-        </tbody>
-      </table>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1 class="text-center display-3">WeatherApp</h1>
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <h4>Tomorrow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h5 th:text="${Forecasts.forecast[0].date}"></h5>
+          </h4>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+        aria-labelledby="panelsStayOpen-headingOne">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+              aria-expanded="false" aria-controls="multiCollapseExample1">Day</a>
+            <button class="btn btn-primary mx-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample2" aria-expanded="false"
+              aria-controls="multiCollapseExample2">Night</button>
+          </div>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          <h5 th:text="${Forecasts.forecast[1].date}"></h5>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
+              aria-expanded="false" aria-controls="multiCollapseExample3">Day</a>
+            <button class="btn btn-primary mx-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample4" aria-expanded="false"
+              aria-controls="multiCollapseExample4">Night</button>
+          </div>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseThree">
+          <h5 th:text="${Forecasts.forecast[2].date}"></h5>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingThree">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
+              aria-expanded="false" aria-controls="multiCollapseExample5">Day</a>
+            <button class="btn btn-primary mx-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample6" aria-expanded="false"
+              aria-controls="multiCollapseExample6">Night</button>
+          </div>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample5">
+                <div class="card card-body">
+                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample6">
+                <div class="card card-body">
+                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseFour">
+          <h5 th:text="${Forecasts.forecast[3].date}"></h5>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingFour">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button"
+              aria-expanded="false" aria-controls="multiCollapseExample7">Day</a>
+            <button class="btn btn-primary mx-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#multiCollapseExample8" aria-expanded="false"
+              aria-controls="multiCollapseExample8">Night</button>
+          </div>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample7">
+                <div class="card card-body">
+                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample8">
+                <div class="card card-body">
+                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
+                  is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
