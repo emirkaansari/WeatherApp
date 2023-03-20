@@ -20,7 +20,5 @@ public class WeatherService {
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         return (Forecasts) jaxbUnmarshaller.unmarshal(url);
     }
-
-
-
+    
 }

@@ -25,11 +25,6 @@
       <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
         aria-labelledby="panelsStayOpen-headingOne">
         <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
           <p>
           <div class="d-flex justify-content-center">
             <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
@@ -43,16 +38,98 @@
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample1">
                 <div class="card card-body">
-                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                      <strong>Estonia Average:</strong><br>
+                      <span th:text="${Forecasts.forecast[0].day.phenomenon}"></span><br>
+                       Minimum Temperature: <span th:text="${Forecasts.forecast[0].day.tempmin}"></span><br>
+                       Maximum Temperature: <span th:text="${Forecasts.forecast[0].day.tempmax}"></span><br>
+                       <span th:text="${Forecasts.forecast[0].day.text}"></span>
+                  </p>
+                  <table class="table table-light table-hover">
+                    <tr >
+                      <th>City</th>
+                      <th>Temp</th>
+                      <th>Phenomenon</th>
+                    </tr>
+                    <tr th:each="place : ${Forecasts.forecast[0].day.place}">
+                      <td th:text="${place.name}"></td>
+                      <td th:text="${place.tempmax}"></td>
+                      <td th:text="${place.phenomenon}"></td>
+                    </tr>
+                  </table>
+                  <table class="table table-light table-hover">
+                    <tr >
+                      <th>Wind</th>
+                      <th>Direction</th>
+                      <th>Minimum Speed</th>
+                      <th>Maximum Speed</th>
+                      <th>Gust</th>
+                    </tr>
+                    <tr th:each="wind : ${Forecasts.forecast[0].day.wind}">
+                      <td th:text="${wind.name}"></td>
+                      <td th:text="${wind.direction}"></td>
+                      <td th:text="${wind.speedmin}"></td>
+                      <td th:text="${wind.speedmax}"></td>
+                      <td th:text="${wind.gust}"></td>
+                    </tr>
+                  </table>
+                  <details>
+                    <summary>Sea</summary>
+                    <span th:text="${Forecasts.forecast[0].day.sea}"></span>
+                  </details>
+                  <details>
+                    <summary>Peipsi</summary>
+                    <span th:text="${Forecasts.forecast[0].day.peipsi}"></span>
+                  </details>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample2">
                 <div class="card card-body">
-                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                      <strong>Estonia Average:</strong><br>
+                      <span th:text="${Forecasts.forecast[0].night.phenomenon}"></span><br>
+                       Minimum Temperature: <span th:text="${Forecasts.forecast[0].night.tempmin}"></span><br>
+                       Maximum Temperature: <span th:text="${Forecasts.forecast[0].night.tempmax}"></span><br>
+                       <span th:text="${Forecasts.forecast[0].night.text}"></span>
+                  </p>
+                  <table class="table table-dark table-hover">
+                    <tr >
+                      <th>City</th>
+                      <th>Temp</th>
+                      <th>Phenomenon</th>
+                    </tr>
+                    <tr th:each="place : ${Forecasts.forecast[0].night.place}">
+                      <td th:text="${place.name}"></td>
+                      <td th:text="${place.tempmin}"></td>
+                      <td th:text="${place.phenomenon}"></td>
+                    </tr>
+                  </table>
+                  <table class="table table-dark table-hover">
+                    <tr >
+                      <th>Wind</th>
+                      <th>Direction</th>
+                      <th>Minimum Speed</th>
+                      <th>Maximum Speed</th>
+                      <th>Gust</th>
+                    </tr>
+                    <tr th:each="wind : ${Forecasts.forecast[0].night.wind}">
+                      <td th:text="${wind.name}"></td>
+                      <td th:text="${wind.direction}"></td>
+                      <td th:text="${wind.speedmin}"></td>
+                      <td th:text="${wind.speedmax}"></td>
+                      <td th:text="${wind.gust}"></td>
+                    </tr>
+                  </table>
+                  <details>
+                    <summary>Sea</summary>
+                    <span th:text="${Forecasts.forecast[0].night.sea}"></span>
+                  </details>
+                  <details>
+                    <summary>Peipsi</summary>
+                    <span th:text="${Forecasts.forecast[0].night.peipsi}"></span>
+                  </details>
                 </div>
               </div>
             </div>
@@ -70,11 +147,6 @@
       <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
         aria-labelledby="panelsStayOpen-headingTwo">
         <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
           <p>
           <div class="d-flex justify-content-center">
             <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
@@ -88,16 +160,26 @@
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample3">
                 <div class="card card-body">
-                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                    <strong>Estonia Average:</strong><br>
+                    <span th:text="${Forecasts.forecast[1].day.phenomenon}"></span><br>
+                     Minimum Temperature: <span th:text="${Forecasts.forecast[1].day.tempmin}"></span><br>
+                     Maximum Temperature: <span th:text="${Forecasts.forecast[1].day.tempmax}"></span><br>
+                     <span th:text="${Forecasts.forecast[1].day.text}"></span>
+                </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample4">
                 <div class="card card-body">
-                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                    <strong>Estonia Average:</strong><br>
+                    <span th:text="${Forecasts.forecast[1].night.phenomenon}"></span><br>
+                     Minimum Temperature: <span th:text="${Forecasts.forecast[1].night.tempmin}"></span><br>
+                     Maximum Temperature: <span th:text="${Forecasts.forecast[1].night.tempmax}"></span><br>
+                     <span th:text="${Forecasts.forecast[1].night.text}"></span>
+                </p>
                 </div>
               </div>
             </div>
@@ -116,11 +198,6 @@
       <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
         aria-labelledby="panelsStayOpen-headingThree">
         <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
           <p>
           <div class="d-flex justify-content-center">
             <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
@@ -134,16 +211,26 @@
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample5">
                 <div class="card card-body">
-                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                    <strong>Estonia Average:</strong><br>
+                    <span th:text="${Forecasts.forecast[2].day.phenomenon}"></span><br>
+                     Minimum Temperature: <span th:text="${Forecasts.forecast[2].day.tempmin}"></span><br>
+                     Maximum Temperature: <span th:text="${Forecasts.forecast[2].day.tempmax}"></span><br>
+                     <span th:text="${Forecasts.forecast[2].day.text}"></span>
+                </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample6">
                 <div class="card card-body">
-                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                    <strong>Estonia Average:</strong><br>
+                    <span th:text="${Forecasts.forecast[2].night.phenomenon}"></span><br>
+                     Minimum Temperature: <span th:text="${Forecasts.forecast[2].night.tempmin}"></span><br>
+                     Maximum Temperature: <span th:text="${Forecasts.forecast[2].night.tempmax}"></span><br>
+                     <span th:text="${Forecasts.forecast[2].night.text}"></span>
+                </p>
                 </div>
               </div>
             </div>
@@ -162,11 +249,6 @@
       <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
         aria-labelledby="panelsStayOpen-headingFour">
         <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
           <p>
           <div class="d-flex justify-content-center">
             <a class="btn btn-primary mx-auto" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button"
@@ -180,16 +262,26 @@
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample7">
                 <div class="card card-body">
-                  Some placeholder content for the first collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                    <strong>Estonia Average:</strong><br>
+                    <span th:text="${Forecasts.forecast[3].day.phenomenon}"></span><br>
+                     Minimum Temperature: <span th:text="${Forecasts.forecast[3].day.tempmin}"></span><br>
+                     Maximum Temperature: <span th:text="${Forecasts.forecast[3].day.tempmax}"></span><br>
+                     <span th:text="${Forecasts.forecast[3].day.text}"></span>
+                </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="collapse multi-collapse" id="multiCollapseExample8">
                 <div class="card card-body">
-                  Some placeholder content for the second collapse component of this multi-collapse example. This panel
-                  is hidden by default but revealed when the user activates the relevant trigger.
+                  <p>
+                    <strong>Estonia Average:</strong><br>
+                    <span th:text="${Forecasts.forecast[3].night.phenomenon}"></span><br>
+                     Minimum Temperature: <span th:text="${Forecasts.forecast[3].night.tempmin}"></span><br>
+                     Maximum Temperature: <span th:text="${Forecasts.forecast[3].night.tempmax}"></span><br>
+                     <span th:text="${Forecasts.forecast[3].night.text}"></span>
+                </p>
                 </div>
               </div>
             </div>
@@ -202,5 +294,4 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
