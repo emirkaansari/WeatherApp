@@ -5,7 +5,6 @@
 // Generated on: 2023.03.18 at 05:25:29 PM EET 
 //
 
-
 package com.eks.WeatherApp.pojo;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -17,11 +16,13 @@ import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -41,8 +42,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "night",
-    "day"
+        "night",
+        "day"
 })
 @XmlRootElement(name = "forecast")
 public class Forecast {
@@ -59,9 +60,9 @@ public class Forecast {
      * Gets the value of the night property.
      * 
      * @return
-     *     possible object is
-     *     {@link Night }
-     *     
+     *         possible object is
+     *         {@link Night }
+     * 
      */
     public Night getNight() {
         return night;
@@ -71,9 +72,9 @@ public class Forecast {
      * Sets the value of the night property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Night }
-     *     
+     *              allowed object is
+     *              {@link Night }
+     * 
      */
     public void setNight(Night value) {
         this.night = value;
@@ -83,9 +84,9 @@ public class Forecast {
      * Gets the value of the day property.
      * 
      * @return
-     *     possible object is
-     *     {@link Day }
-     *     
+     *         possible object is
+     *         {@link Day }
+     * 
      */
     public Day getDay() {
         return day;
@@ -95,9 +96,9 @@ public class Forecast {
      * Sets the value of the day property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Day }
-     *     
+     *              allowed object is
+     *              {@link Day }
+     * 
      */
     public void setDay(Day value) {
         this.day = value;
@@ -107,9 +108,9 @@ public class Forecast {
      * Gets the value of the date property.
      * 
      * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *         possible object is
+     *         {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getDate() {
         return date;
@@ -119,9 +120,9 @@ public class Forecast {
      * Sets the value of the date property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *              allowed object is
+     *              {@link XMLGregorianCalendar }
+     * 
      */
     public void setDate(XMLGregorianCalendar value) {
         this.date = value;

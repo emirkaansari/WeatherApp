@@ -5,7 +5,6 @@
 // Generated on: 2023.03.18 at 05:25:29 PM EET 
 //
 
-
 package com.eks.WeatherApp.pojo;
 
 import java.util.ArrayList;
@@ -15,11 +14,13 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -37,7 +38,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "forecast"
+        "forecast"
 })
 @XmlRootElement(name = "forecasts")
 public class Forecasts {
@@ -55,8 +56,9 @@ public class Forecasts {
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getForecast().add(newItem);
+     * getForecast().add(newItem);
      * </pre>
      * 
      * 

@@ -5,7 +5,6 @@
 // Generated on: 2023.03.18 at 05:25:29 PM EET 
 //
 
-
 package com.eks.WeatherApp.pojo;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -40,11 +41,11 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name",
-    "direction",
-    "speedmin",
-    "speedmax",
-    "gust"
+        "name",
+        "direction",
+        "speedmin",
+        "speedmax",
+        "gust"
 })
 @XmlRootElement(name = "wind")
 public class Wind {
@@ -61,9 +62,9 @@ public class Wind {
      * Gets the value of the name property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getName() {
         return name;
@@ -73,9 +74,9 @@ public class Wind {
      * Sets the value of the name property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setName(String value) {
         this.name = value;
@@ -85,9 +86,9 @@ public class Wind {
      * Gets the value of the direction property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getDirection() {
         return direction;
@@ -97,9 +98,9 @@ public class Wind {
      * Sets the value of the direction property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setDirection(String value) {
         this.direction = value;

@@ -5,7 +5,6 @@
 // Generated on: 2023.03.18 at 05:25:29 PM EET 
 //
 
-
 package com.eks.WeatherApp.pojo;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -39,10 +40,10 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name",
-    "phenomenon",
-    "tempmin",
-    "tempmax"
+        "name",
+        "phenomenon",
+        "tempmin",
+        "tempmax"
 })
 @XmlRootElement(name = "place")
 public class Place {
@@ -58,9 +59,9 @@ public class Place {
      * Gets the value of the name property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getName() {
         return name;
@@ -70,9 +71,9 @@ public class Place {
      * Sets the value of the name property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setName(String value) {
         this.name = value;
@@ -82,9 +83,9 @@ public class Place {
      * Gets the value of the phenomenon property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getPhenomenon() {
         return phenomenon;
@@ -94,9 +95,9 @@ public class Place {
      * Sets the value of the phenomenon property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setPhenomenon(String value) {
         this.phenomenon = value;
@@ -106,9 +107,9 @@ public class Place {
      * Gets the value of the tempmin property.
      * 
      * @return
-     *     possible object is
-     *     {@link Byte }
-     *     
+     *         possible object is
+     *         {@link Byte }
+     * 
      */
     public Byte getTempmin() {
         return tempmin;
@@ -118,9 +119,9 @@ public class Place {
      * Sets the value of the tempmin property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Byte }
-     *     
+     *              allowed object is
+     *              {@link Byte }
+     * 
      */
     public void setTempmin(Byte value) {
         this.tempmin = value;
@@ -130,9 +131,9 @@ public class Place {
      * Gets the value of the tempmax property.
      * 
      * @return
-     *     possible object is
-     *     {@link Byte }
-     *     
+     *         possible object is
+     *         {@link Byte }
+     * 
      */
     public Byte getTempmax() {
         return tempmax;
@@ -142,9 +143,9 @@ public class Place {
      * Sets the value of the tempmax property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Byte }
-     *     
+     *              allowed object is
+     *              {@link Byte }
+     * 
      */
     public void setTempmax(Byte value) {
         this.tempmax = value;

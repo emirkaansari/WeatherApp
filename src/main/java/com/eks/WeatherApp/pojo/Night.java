@@ -5,7 +5,6 @@
 // Generated on: 2023.03.18 at 05:25:29 PM EET 
 //
 
-
 package com.eks.WeatherApp.pojo;
 
 import java.util.ArrayList;
@@ -16,11 +15,13 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -45,14 +46,14 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "phenomenon",
-    "tempmin",
-    "tempmax",
-    "text",
-    "place",
-    "wind",
-    "sea",
-    "peipsi"
+        "phenomenon",
+        "tempmin",
+        "tempmax",
+        "text",
+        "place",
+        "wind",
+        "sea",
+        "peipsi"
 })
 @XmlRootElement(name = "night")
 public class Night {
@@ -72,9 +73,9 @@ public class Night {
      * Gets the value of the phenomenon property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getPhenomenon() {
         return phenomenon;
@@ -84,9 +85,9 @@ public class Night {
      * Sets the value of the phenomenon property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setPhenomenon(String value) {
         this.phenomenon = value;
@@ -128,9 +129,9 @@ public class Night {
      * Gets the value of the text property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getText() {
         return text;
@@ -140,9 +141,9 @@ public class Night {
      * Sets the value of the text property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setText(String value) {
         this.text = value;
@@ -159,8 +160,9 @@ public class Night {
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getPlace().add(newItem);
+     * getPlace().add(newItem);
      * </pre>
      * 
      * 
@@ -188,8 +190,9 @@ public class Night {
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getWind().add(newItem);
+     * getWind().add(newItem);
      * </pre>
      * 
      * 
@@ -210,9 +213,9 @@ public class Night {
      * Gets the value of the sea property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getSea() {
         return sea;
@@ -222,9 +225,9 @@ public class Night {
      * Sets the value of the sea property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setSea(String value) {
         this.sea = value;
@@ -234,9 +237,9 @@ public class Night {
      * Gets the value of the peipsi property.
      * 
      * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *         possible object is
+     *         {@link String }
+     * 
      */
     public String getPeipsi() {
         return peipsi;
@@ -246,9 +249,9 @@ public class Night {
      * Sets the value of the peipsi property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *              allowed object is
+     *              {@link String }
+     * 
      */
     public void setPeipsi(String value) {
         this.peipsi = value;
